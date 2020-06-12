@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Note training app
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!loggedIn" class="card">
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <ion-icon name="log-in"></ion-icon>&nbsp;Please Login to continue
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="loggedIn">
+  <ion-list no-padding>
+    <ion-item color="secondary">
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col size="4" text-center> Title </ion-col>
+          <ion-col size="4" text-center> Message </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item button *ngFor="let note of noteList">
+      <ion-grid no-padding style="height: 100% ; width: 100%;">
+        <ion-row no-padding style="align-items: center ; vertical-align: middle; height: 100%;">
+          <ion-col (click)="viewNote(note.uuid)" size="4" text-center>{{note.title}}</ion-col>
+          <ion-col (click)="viewNote(note.uuid)" size="4" text-center>{{note.message}}</ion-col>
+          <ion-col size="2" text-right no-padding>
+            <ion-button expand="full" no-padding color="tertiary" fill="clear" [disabled]="note.isProposed"
+              (click)="proposeEditNote(note.uuid)">
+              <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="2" text-right no-padding>
+            <ion-button expand="full" no-padding color="tertiary" fill="clear" (click)="deleteNote(note.uuid)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

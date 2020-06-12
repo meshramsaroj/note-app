@@ -1,0 +1,13 @@
+<mat-card class="card-container">
+  <form [formGroup]="noteForm" (ngSubmit)="createNote()">
+
+    <label>Title:</label>
+    <input type="text" formControlName="title" required>
+    <br>
+    <label>Message:</label>
+    <input type="text" formControlName="message" required>
+
+    <button mat-button color="primary" type="submit" [disabled]="!noteForm.valid">
+      create</button>
+  </form>
+</mat-card>

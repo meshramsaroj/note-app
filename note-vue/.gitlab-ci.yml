@@ -1,0 +1,23 @@
+image: registry.gitlab.com/castlecraft/docker-craft/node-latest-headless-chrome:latest
+
+services:
+  - docker:dind
+
+stages:
+  - tests
+
+test_vue_oidc_client:
+  image: cypress/base
+  stage: tests
+  before_script:
+    - npm install
+    - npm ci
+  script:
+    - npm run lint
+    # set env variable for test
+    - export NODE_ENV=test
+    # Test frontend
+    - npm run test
+    - npm run test:e2e -- --headless
+  tags:
+    - docker

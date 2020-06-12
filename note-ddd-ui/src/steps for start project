@@ -1,0 +1,10 @@
+1: Open terminal
+2: run "ls" command
+3: cd Projects/note-ddd-ui/
+4: npm run starte
+5: also run the rester terminal
+    go to Projects/note-training-app/packages/note-mongodb
+    and then
+    npm run start
+to create new component:
+    ng g c <component_name>

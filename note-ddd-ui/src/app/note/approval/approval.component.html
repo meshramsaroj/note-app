@@ -1,0 +1,26 @@
+<mat-card class="left">
+    <h3>Original Note</h3>
+    <ul>
+        <li>
+            Title : {{oldTitle}}
+        </li>
+        <li>
+            Message : {{oldMessage}}
+        </li>
+    </ul>
+</mat-card>
+<mat-card class="right" *ngIf="responseData">
+    <h3>Proposed Note</h3>
+    <ol>
+        <li>
+            Title : {{proposedTitle}}
+        </li>
+        <li>
+            Message : {{proposedMessage}}
+        </li>
+    </ol>
+    <button mat-button (click)="approveNote()">Approve</button>
+    <button mat-button (click)="dissApproveNote()">Diss-approve</button>
+
+
+</mat-card>

@@ -1,0 +1,14 @@
+<mat-card>
+  <form [formGroup]="noteForm">
+      <label>Uuid</label>
+      <input type="text" formControlName="noteUuid">
+      <br>
+      <label>Title:</label>
+      <input type="text" formControlName="title" required>
+      <br>
+      <label>Message:</label>
+      <input type="text" formControlName="message" required>
+
+    <ol><button mat-button color="primary" (click)="proposeNote()" >propose</button></ol>
+    </form>
+  </mat-card>

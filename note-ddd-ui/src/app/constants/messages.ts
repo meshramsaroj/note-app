@@ -1,0 +1,27 @@
+export const CLIENT_VERIFIED = 'Client verified.';
+export const CLIENT_UNVERIFIED = 'Client unverified.';
+export const CLIENT_CREATED = 'Client created Successfully.';
+export const CLIENT_UPDATED = 'Client updated Successfully.';
+export const CLIENT_ERROR = 'Could not create client.';
+export const CANNOT_FETCH_MODELS = 'Cannot fetch models';
+export const CANNOT_FETCH_CLIENT = 'Cannot fetch client';
+export const LOGIN_AS_ADMINISTRATOR = 'Please login as administrator';
+export const SOCIAL_LOGIN_ERROR = 'Could not create Social Login';
+export const SOCIAL_LOGIN_UPDATED = 'Social Login Updated Successfully';
+export const SOCIAL_LOGIN_CREATED = 'Social Login Added Successfully';
+export const UPDATE_SUCCESSFUL = 'Updated Successfully';
+export const CREATE_SUCCESSFUL = 'Created Successfully';
+export const DELETE_SUCCESSFUL = 'Deleted Successfully';
+export const CREATE_ERROR = 'Error in creating document';
+export const UPDATE_ERROR = 'Error in updating document';
+export const FETCH_ERROR = 'Error in fetching document';
+export const DELETE_ERROR = 'Error in deleting document';
+export const CLOSE = 'Close';
+export const IS_DOWN = 'is down';
+export const ERROR_UPDATING_SERVICE_SETTINGS =
+  'Error in updating service settings';
+export const DELETING = 'Deleting';
+export const UNDO = 'Undo';
+export const BASIC_HEADER = 'Basic Header';
+export const PUBLIC_CLIENT = 'Public Client';
+export const BODY_PARAM = 'Body Param';
